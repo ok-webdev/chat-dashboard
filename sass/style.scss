@@ -2,15 +2,19 @@
 @import './utils/variables';
 @import './utils/mixins';
 
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  width: 100vw;
+  height: 100%;
+  background: linear-gradient(180deg, #F3F3FB 0%, #FDFBFD 100%);
   font-family: 'TTNorms';
 }
 
-.medium {
-  font-weight: 500;
-  font-size: 14px;
-}
-.bold {
-  font-weight: 700;
-  font-size: 14px;
-}
+@import './blocks/menu';
