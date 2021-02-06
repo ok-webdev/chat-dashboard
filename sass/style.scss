@@ -1,0 +1,16 @@
+@import './utils/fonts';
+@import './utils/variables';
+@import './utils/mixins';
+
+body {
+  font-family: 'TTNorms';
+}
+
+.medium {
+  font-weight: 500;
+  font-size: 14px;
+}
+.bold {
+  font-weight: 700;
+  font-size: 14px;
+}
