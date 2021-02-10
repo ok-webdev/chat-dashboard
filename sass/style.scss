@@ -12,17 +12,22 @@
 
 body {
     width: 100vw;
-    height: 100vh;
+    height: 1080px;
     background: linear-gradient(180deg, #F3F3FB 0%, #FDFBFD 100%);
     font-family: 'TTNorms';
 }
 
 .main {
-  height: 100%;
-  display: flex;
-  align-items: center;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    overflow-y: auto;
 }
-@import './blocks/btn';
+
 @import './blocks/menu';
+@import './blocks/avatar';
 @import './blocks/chats';
 @import './blocks/interlocutor';
+@import './blocks/chat';
+@import './blocks/btn';

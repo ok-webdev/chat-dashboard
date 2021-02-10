@@ -1,8 +1,6 @@
 .chats {
-    flex-basis: 35%;
+    flex-basis: 31%;
     height: 100vh;
-    margin-left: 59px;
-    overflow-y: hidden;
 
     &__header {
         display: flex;
@@ -45,12 +43,19 @@
             align-items: center;
         }
     }
+
     &__input {
-      font-size: 18px;
-      font-weight: 500;
-      color: $secondary-color;
-      border: none;
-      outline: transparent;
-      margin-left: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        color: $secondary-color;
+        border: none;
+        outline: transparent;
+        margin-left: 10px;
+    }
+
+    &__body {
+        width: 100%;
+        max-height: 793px;
+        overflow-y: scroll;
     }
 }
