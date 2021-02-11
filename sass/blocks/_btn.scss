@@ -76,4 +76,15 @@
             }
         }
     }
+    &__panel {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background: linear-gradient(325.78deg, #2A8BF2 14.76%, #7CB8F7 87.3%);
+        box-shadow: 0px 10px 15px rgba(42, 139, 242, 0.2), 0px 7px 25px rgba(42, 139, 242, 0.1), 0px 5px 25px rgba(42, 139, 242, 0.1);
+        &_transparent {
+            background: transparent;
+            box-shadow: none;
+        }
+    }
 }

@@ -79,10 +79,26 @@
             <header class="chats__header">
                 <div class="chats__left">
                     <h1 class="chats__title">Chats</h1>
-                    <a href="#" class="chats__filter">
-                        <span>Resent chats</span>
-                        <img src="svg/icon-chevron-down.svg" alt="arrow" />
-                    </a>
+                    <ul class="chats__filter">
+                        <li class="chats__filter-element">
+                            <a href="#">
+                                <span>Resent chats</span>
+                                <img src="svg/icon-chevron-down.svg" alt="arrow" />
+                            </a>
+                            <ul class="chats__filter-submenu">
+                                <li>
+                                    <a href="#" class="chats__filter">
+                                        <span>Another chat</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="chats__filter">
+                                        <span>Something</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
                 <!-- /.chats__left -->
                 <div class="chats__right">
@@ -99,6 +115,26 @@
                     <img src="svg/icon-search.svg" alt="search" />
                     <input type="text" id="search-input" class="chats__input" placeholder="Search" />
                 </label>
+                <ul class="chats__search-filter">
+                    <li class="chats__search-filter-element">
+                        <a href="#">
+                            <span>Messages</span>
+                            <img src="svg/icon-chevron-down.svg" alt="arrow" />
+                        </a>
+                        <ul class="chats__search-filter-submenu">
+                            <li>
+                                <a href="#" class="chats__search-filter">
+                                    <span>Name</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="chats__search-filter">
+                                    <span>Text</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </form>
             <!-- /.chats__search -->
             <div class="chats__body">
@@ -110,7 +146,12 @@
                             </div>
                             <div class="interlocutor__user">
                                 <h2 class="interlocutor__user-name">Luy Robin</h2>
-                                <p class="interlocutor__user-action">writes</p>
+                                <p class="interlocutor__user-action">
+                                        <span class="animated__writes animated__writes_1"></span>
+                                        <span class="animated__writes animated__writes_2"></span>
+                                        <span class="animated__writes animated__writes_3"></span>
+                                    writes
+                                </p>
                             </div>
                             <!-- /.interlocutor__user -->
                         </div>
@@ -145,7 +186,12 @@
                             </div>
                             <div class="interlocutor__user">
                                 <h2 class="interlocutor__user-name">Jured Sunn</h2>
-                                <p class="interlocutor__user-action">records voice message</p>
+                                <p class="interlocutor__user-action">
+                                    <span class="animated__voice animated__voice_outside">
+                                        <span class="animated__voice animated__voice_inside"></span>
+                                    </span>
+                                    records voice message
+                                </p>
                             </div>
                             <!-- /.interlocutor__user -->
                         </div>
@@ -159,7 +205,9 @@
                     <div class="interlocutor__message">
                         <div class="interlocutor__message-body">
                             <div class="interlocutor__text">
-                                <p>Voice message <span>(01:15)</span></p>
+                                <p>
+                                    Voice message <span>(01:15)</span>
+                                </p>
                                 <div class="interlocutor__attach">
                                     <button class="btn btn_attach btn_file">
                                         <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -291,9 +339,11 @@
                 </div>
                 <!-- /.chat__left -->
                 <div class="chat__right">
-                    <button class="btn__chat">
-                        <img src="svg/icon-attach.svg" alt="attach" />
-                    </button>
+                    <label for="attach-file" class="btn__chat">
+                        <input type="file" id="attach-file">
+                            <img src="svg/icon-attach.svg" alt="attach" />
+                    </label>
+                    
                     <button class="btn__chat">
                         <img src="svg/icon-more-vertical.svg" alt="more" />
                     </button>
@@ -396,19 +446,49 @@
             </div>
             <!-- /.chat__body -->
             <form action="#" class="chat__panel">
-                <button btn__chat>
-
-                </button>
+                <ul class="chat__panel-menu">
+                    <li class="chat__panel-menu-item">
+                        <button class="btn__chat btn__panel">
+                            <img src="svg/icon-plus.svg" alt="attach something">
+                        </button>
+                        <ul class="chat__panel-submenu">
+                            <li class="chat__panel-menu-item">
+                                <label class="btn__chat btn__panel">
+                                    <input type="file" accept="video/*">
+                                    <img src="svg/icon-film.svg" alt="attach video">
+                                </label>
+                            </li>
+                            <li class="chat__panel-menu-item">
+                                <label for="image" class="btn__chat btn__panel">
+                                    <input id="image" type="file" accept="image/*">
+                                    <img src="svg/icon-image.svg" alt="attach immage">
+                                </label>
+                            </li>
+                            <li class="chat__panel-menu-item">
+                                <label for="file" class="btn__chat btn__panel">
+                                    <input id="file" type="file" >
+                                    <img src="svg/icon-file.svg" alt="attach document">
+                                </label>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                
                 <label for="message">
                     <input type="text" id="message" placeholder="Type a message here" />
-                    <button></button>
+                    <button class="btn__chat btn__panel btn__panel_transparent">
+                        <img src="svg/icon-smile.svg" alt="smile">
+                    </button>
                 </label>
-                <button></button>
+                <button class="btn__chat btn__panel">
+                    <img src="svg/icon-send.svg" alt="Send">
+                </button>
             </form>
         </section>
         <!-- /.chat -->
     </main>
     <!-- /.main -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>

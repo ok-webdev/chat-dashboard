@@ -1,6 +1,7 @@
 .chats {
     flex-basis: 31%;
-    height: 100vh;
+    height: 100%;
+    overflow-y: hidden;
 
     &__header {
         display: flex;
@@ -20,15 +21,42 @@
     &__filter {
         display: flex;
         align-items: center;
-        font-size: 18px;
-        color: $secondary-color;
-        text-transform: capitalize;
-        text-decoration: none;
-        margin-top: 15px;
 
-        & span {
-            margin-right: 10px;
+        &-submenu {
+            background: #F3F3FB;
+            list-style: none;
+            position: absolute;
+            bottom: -80px;
+            transform: translateY(-500%);
+            opacity: 0;
+            transition: all .3s;
+
+            &_active {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
+
+        &-element {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+
+            & a {
+                width: 100%;
+                margin: 15px 0;
+                font-size: 18px;
+                color: $secondary-color;
+                text-transform: capitalize;
+                text-decoration: none;
+            }
+
+            & span {
+                margin-right: 10px;
+            }
+        }
+
     }
 
     &__search {
@@ -37,14 +65,67 @@
         margin-top: 25px;
         padding: 23px 40px;
         border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
         & label {
             display: flex;
             align-items: center;
         }
+
+        &-filter {
+            display: flex;
+            align-items: center;
+
+            &-submenu {
+                width: 100%;
+                background: #fff;
+                list-style: none;
+                position: absolute;
+                bottom: -90px;
+                left: 0;
+                transform: translateY(-500%);
+                opacity: 0;
+                transition: all .3s;
+
+                & a {
+                    margin: 15px 0;
+
+                    & span {
+                        padding-left: 15px;
+                    }
+                }
+
+                &_active {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            &-element {
+                position: relative;
+                display: flex;
+                align-items: center;
+
+
+                & a {
+                    width: 100%;
+                    font-size: 18px;
+                    color: $secondary-color;
+                    text-transform: capitalize;
+                    text-decoration: none;
+                }
+
+                & span {
+                    margin-right: 10px;
+                }
+            }
+        }
     }
 
     &__input {
+        width: 80%;
         font-size: 18px;
         font-weight: 500;
         color: $secondary-color;

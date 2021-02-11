@@ -1,0 +1,86 @@
+.animated{
+  &__writes {
+    width: 3px;
+    height: 3px;
+    border-radius: 100%;
+    background: $primary-color;
+    margin-right: 3px;
+    
+    &_1 {
+      animation: first-circle .6s infinite ease-in-out;
+    }
+    &_2 {
+      animation: second-circle .6s infinite ease-in-out;
+    }
+    &_3 {
+      animation: third-circle .6s infinite ease-in-out;
+    }
+  }
+  &__voice {
+    &_outside{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 12px;
+      height: 12px;
+      background: rgba(42, 139, 242, 0.25);
+      border-radius: 100%;
+      margin-right: 3px;
+    }
+    &_inside {
+      width: 4px;
+      height: 4px;
+      border-radius: 100%;
+      background: $primary-color;
+      animation: voice 1s infinite linear;
+    }
+  }
+}
+
+@keyframes first-circle {
+  0% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes second-circle {
+  0% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(2px);
+  }
+}
+
+@keyframes third-circle {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes voice {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
