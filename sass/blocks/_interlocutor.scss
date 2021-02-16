@@ -4,7 +4,7 @@
     padding: 30px 40px 40px 40px;
     margin-top: 20px;
     border-radius: 6px;
-
+    
     &__header {
         display: flex;
         justify-content: space-between;
@@ -29,7 +29,7 @@
         &-action {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             font-size: 16px;
             font-weight: 500;
             text-transform: lowercase;
@@ -48,7 +48,7 @@
     &__message {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: start;
         margin-top: 26px;
 
         &-body {

@@ -13,6 +13,7 @@ chatSearchFilter.addEventListener('click', () => {
     chatSearchFilterMenu.classList.toggle('chats__search-filter-submenu_active');
 });
 
-panelMenu.addEventListener('click', () => {
+panelMenu.addEventListener('click', (event) => {
+  event.preventDefault();
   panelSubmenu.classList.toggle('chat__panel-submenu_active');
 }); 

@@ -4,8 +4,7 @@
     height: 3px;
     border-radius: 100%;
     background: $primary-color;
-    margin-right: 3px;
-    
+    margin-right: 5px;
     &_1 {
       animation: first-circle .6s infinite ease-in-out;
     }
@@ -39,37 +38,37 @@
 
 @keyframes first-circle {
   0% {
-    transform: translateY(2px);
+    transform: translateY(4px);
   }
   50% {
-    transform: translateY(-2px);
+    transform: translateY(0px);
   }
   100% {
-    transform: translateY(0px);
+    transform: translateY(2px);
   }
 }
 
 @keyframes second-circle {
   0% {
-    transform: translateY(-2px);
-  }
-  50% {
     transform: translateY(0px);
   }
-  100% {
+  50% {
     transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(4px);
   }
 }
 
 @keyframes third-circle {
   0% {
-    transform: translateY(0px);
-  }
-  50% {
     transform: translateY(2px);
   }
+  50% {
+    transform: translateY(4px);
+  }
   100% {
-    transform: translateY(-2px);
+    transform: translateY(0px);
   }
 }
 
